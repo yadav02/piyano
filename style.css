@@ -1,0 +1,43 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background-color: aqua;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano{
+    display: flex;
+}
+.key{
+    height: calc(var(--width) * 4);
+    width: calc(var(--width) );
+
+}
+.white{
+   --width: 100px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.white.active{
+    background-color: white;
+}
+
+.black{
+    --width: 60px;
+    height: 240px;
+    background-color: black;
+    margin-left:  calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 2;
+    border-radius: 8px;
+}
+.balck.active{
+    background-color: balck;
+}
